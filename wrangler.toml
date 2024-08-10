@@ -19,7 +19,7 @@ routes = [
   { pattern = "k8s-gcr.renlm.cn", custom_domain = true },
   { pattern = "k8s.renlm.cn", custom_domain = true },
   { pattern = "ghcr.renlm.cn", custom_domain = true },
-  { pattern = "cloudsmith.renlm.cn", custom_domain = true }
+  { pattern = "cloudsmith.renlm.cn", custom_domain = true },
 ]
 
 [env.production.vars]
