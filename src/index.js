@@ -6,18 +6,10 @@ addEventListener("fetch", (event) => {
 const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
-  // production
   "docker.renlm.cn": dockerHub,
-  "quay.renlm.cn": "https://quay.io",
   "gcr.renlm.cn": "https://gcr.io",
-  "k8s-gcr.renlm.cn": "https://k8s.gcr.io",
-  "k8s.renlm.cn": "https://registry.k8s.io",
   "ghcr.renlm.cn": "https://ghcr.io",
-  "cloudsmith.renlm.cn": "https://docker.cloudsmith.io",
-  "ecr.renlm.cn": "https://public.ecr.aws",
-
-  // staging
-  "docker-staging.renlm.cn": dockerHub,
+  "quay.renlm.cn": "https://quay.io",
 };
 
 function routeByHosts(host) {
