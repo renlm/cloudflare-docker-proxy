@@ -12,6 +12,12 @@ TARGET_UPSTREAM = "https://registry-1.docker.io"
 
 [env.production]
 name = "cloudflare-docker-proxy"
+# routes = [
+#   { pattern = "docker.renlm.cn", custom_domain = true },
+#   { pattern = "gcr.renlm.cn", custom_domain = true },
+#   { pattern = "ghcr.renlm.cn", custom_domain = true },
+#   { pattern = "quay.renlm.cn", custom_domain = true },
+# ]
 
 [env.production.vars]
 MODE = "production"
