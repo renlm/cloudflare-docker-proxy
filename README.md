@@ -30,11 +30,11 @@
    - add more records and modify the config as you need
    ```javascript
    const routes = {
-     "docker.renlm.cn": "https://registry-1.docker.io",
-     "quay.renlm.cn": "https://quay.io",
-     "gcr.renlm.cn": "https://k8s.gcr.io",
-     "k8s-gcr.renlm.cn": "https://k8s.gcr.io",
-     "ghcr.renlm.cn": "https://ghcr.io",
+     "docker-io.renlm.cn": "https://registry-1.docker.io",
+     "gcr-io.renlm.cn": "https://gcr.io",
+     "ghcr-io.renlm.cn": "https://ghcr.io",
+     "quay-io.renlm.cn": "https://quay.io",
+  	 "docker.renlm.cn": "https://hub.docker.com",
    };
    ```
 

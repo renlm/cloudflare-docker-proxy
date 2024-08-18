@@ -6,10 +6,11 @@ addEventListener("fetch", (event) => {
 const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
-  "docker.renlm.cn": dockerHub,
-  "gcr.renlm.cn": "https://gcr.io",
-  "ghcr.renlm.cn": "https://ghcr.io",
-  "quay.renlm.cn": "https://quay.io",
+  "docker-io.renlm.cn": dockerHub,
+  "gcr-io.renlm.cn": "https://gcr.io",
+  "ghcr-io.renlm.cn": "https://ghcr.io",
+  "quay-io.renlm.cn": "https://quay.io",
+  "docker.renlm.cn": "https://hub.docker.com",
 };
 
 function routeByHosts(host) {
