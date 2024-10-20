@@ -32,6 +32,7 @@
    const routes = {
      "docker-io.renlm.cn": "https://registry-1.docker.io",
      "api-sdkman-io.renlm.cn": "https://api.sdkman.io",
+     "oracle-io.renlm.cn": "https://container-registry.oracle.com",
      "gcr-io.renlm.cn": "https://gcr.io",
      "ghcr-io.renlm.cn": "https://ghcr.io",
      "quay-io.renlm.cn": "https://quay.io",
