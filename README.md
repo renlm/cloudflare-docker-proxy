@@ -31,7 +31,6 @@
    ```javascript
    const routes = {
      "docker-io.renlm.cn": "https://registry-1.docker.io",
-     "aliyuncs-io.renlm.cn": "https://registry.cn-hangzhou.aliyuncs.com",
      "gcr-io.renlm.cn": "https://gcr.io",
      "ghcr-io.renlm.cn": "https://ghcr.io",
      "quay-io.renlm.cn": "https://quay.io",
