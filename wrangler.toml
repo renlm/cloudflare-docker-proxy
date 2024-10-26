@@ -19,6 +19,7 @@ name = "cloudflare-docker-proxy"
 #   { pattern = "quay-io.renlm.cn", custom_domain = true },
 #   { pattern = "docker.renlm.cn", custom_domain = true },
 #   { pattern = "github.renlm.cn", custom_domain = true },
+#   { pattern = "github-io.renlm.cn", custom_domain = true },
 # ]
 
 [env.production.vars]

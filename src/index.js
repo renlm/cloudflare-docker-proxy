@@ -12,6 +12,7 @@ const routes = {
   "quay-io.renlm.cn": "https://quay.io",
   "docker.renlm.cn": "https://hub.docker.com",
   "github.renlm.cn": "https://github.com",
+  "github-io.renlm.cn": "https://renlm.github.io",
 };
 
 function routeByHosts(host) {
