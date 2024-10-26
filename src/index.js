@@ -11,6 +11,7 @@ const routes = {
   "ghcr-io.renlm.cn": "https://ghcr.io",
   "quay-io.renlm.cn": "https://quay.io",
   "docker.renlm.cn": "https://hub.docker.com",
+  "github.renlm.cn": "https://github.com",
 };
 
 function routeByHosts(host) {
