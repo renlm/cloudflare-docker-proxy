@@ -4,9 +4,10 @@ addEventListener("fetch", (event) => {
 });
 
 const dockerHub = TARGET_UPSTREAM;
+const dockerHubProxy = "docker-io." + CUSTOM_DOMAIN;
 
 const routes = {
-  ["docker-io." + CUSTOM_DOMAIN]: dockerHub,
+  [dockerHubProxy]: dockerHub,
   ["registry-k8s-io." + CUSTOM_DOMAIN]: "https://registry.k8s.io",
   ["gcr-io." + CUSTOM_DOMAIN]: "https://gcr.io",
   ["ghcr-io." + CUSTOM_DOMAIN]: "https://ghcr.io",
@@ -104,7 +105,8 @@ async function handleRequest(request) {
     redirect: "follow",
   });
   const resp = await fetch(newReq);
-  if (resp.status == 401) {
+  const isDockerHubProxy = dockerHubProxy == url.hostname;
+  if (isDockerHubProxy && resp.status == 401) {
     return responseUnauthorized(url);
   }
   return resp;
