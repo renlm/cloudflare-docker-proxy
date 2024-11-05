@@ -4,7 +4,6 @@ addEventListener("fetch", (event) => {
 });
 
 const dockerHub = "https://registry-1.docker.io";
-const authenticateService = { "registry.docker.io": "https://auth-docker-io.renlm.cn/token" };
 
 const routes = {
   "docker-io.renlm.cn": dockerHub,
@@ -132,7 +131,7 @@ function parseAuthenticate(authenticateStr) {
     throw new Error(`invalid Www-Authenticate Header: ${authenticateStr}`);
   }
   return {
-    realm: authenticateService[matches[1]] ? authenticateService[matches[1]] : matches[0],
+    realm: matches[0],
     service: matches[1],
   };
 }
