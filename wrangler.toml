@@ -6,18 +6,15 @@ ip = "0.0.0.0"
 port = 8787
 local_protocol = "http"
 
-[env.vars]
-CUSTOM_DOMAIN = "renlm.cn"
-
 [env.dev.vars]
 MODE = "debug"
 TARGET_UPSTREAM = "https://registry-1.docker.io"
+CUSTOM_DOMAIN = "renlm.cn"
 
 [env.production]
 name = "cloudflare-docker-proxy"
 # routes = [
 #   { pattern = "docker-io.renlm.cn", custom_domain = true },
-#   { pattern = "auth-docker-io.renlm.cn", custom_domain = true },
 #   { pattern = "registry-k8s-io.renlm.cn", custom_domain = true },
 #   { pattern = "gcr-io.renlm.cn", custom_domain = true },
 #   { pattern = "ghcr-io.renlm.cn", custom_domain = true },
@@ -29,4 +26,5 @@ name = "cloudflare-docker-proxy"
 
 [env.production.vars]
 MODE = "production"
-TARGET_UPSTREAM = ""
+TARGET_UPSTREAM = "https://registry-1.docker.io"
+CUSTOM_DOMAIN = "renlm.cn"

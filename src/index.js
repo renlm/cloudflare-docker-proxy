@@ -3,11 +3,10 @@ addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });
 
-const dockerHub = "https://registry-1.docker.io";
+const dockerHub = TARGET_UPSTREAM;
 
 const routes = {
   ["docker-io." + CUSTOM_DOMAIN]: dockerHub,
-  ["auth-docker-io." + CUSTOM_DOMAIN]: "https://auth.docker.io",
   ["registry-k8s-io." + CUSTOM_DOMAIN]: "https://registry.k8s.io",
   ["gcr-io." + CUSTOM_DOMAIN]: "https://gcr.io",
   ["ghcr-io." + CUSTOM_DOMAIN]: "https://ghcr.io",
