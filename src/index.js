@@ -71,6 +71,10 @@ async function handleRequest(request) {
         headers: headers,
       });
     } else {
+		headers.set(
+		          "Www-TTT",
+		          `Bearer realm="x"`
+		        );
       return resp;
     }
   }
