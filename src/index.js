@@ -134,12 +134,8 @@ function parseAuthenticate(authenticateStr) {
   if (matches == null || matches.length < 2) {
     throw new Error(`invalid Www-Authenticate Header: ${authenticateStr}`);
   }
-  let matches0 = matches[0];
-  if (matches0 == dockerAuthRealm) {
-    matches0 = dockerAuthRealmProxy;
-  }
   return {
-    realm: matches0,
+    realm: matches[0],
     service: matches[1],
   };
 }
