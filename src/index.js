@@ -4,14 +4,11 @@ addEventListener("fetch", (event) => {
 });
 
 const dockerHub = "https://registry-1.docker.io";
-const dockerAuthDomain = "auth.docker.io";
-const dockerAuthDomainProxy = "auth-docker-io.renlm.cn";
-const dockerAuthRealm = "https://" + dockerAuthDomain + "/token";
-const dockerAuthRealmProxy = "https://" + dockerAuthDomainProxy + "/token";
+const authenticateService = { "registry.docker.io": "https://auth-docker-io.renlm.cn/token" };
 
 const routes = {
   "docker-io.renlm.cn": dockerHub,
-  [dockerAuthDomainProxy]: ["https://" + dockerAuthDomain],
+  "auth-docker-io.renlm.cn": "https://auth.docker.io",
   "registry-k8s-io.renlm.cn": "https://registry.k8s.io",
   "gcr-io.renlm.cn": "https://gcr.io",
   "ghcr-io.renlm.cn": "https://ghcr.io",
@@ -135,7 +132,7 @@ function parseAuthenticate(authenticateStr) {
     throw new Error(`invalid Www-Authenticate Header: ${authenticateStr}`);
   }
   return {
-    realm: matches[0],
+    realm: authenticateService[matches[1]] ? authenticateService[matches[1]] : matches[0],
     service: matches[1],
   };
 }
