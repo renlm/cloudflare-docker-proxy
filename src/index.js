@@ -6,15 +6,15 @@ addEventListener("fetch", (event) => {
 const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
-  "docker-io.renlm.cn": dockerHub,
-  "auth-docker-io.renlm.cn": "https://auth.docker.io",
-  "registry-k8s-io.renlm.cn": "https://registry.k8s.io",
-  "gcr-io.renlm.cn": "https://gcr.io",
-  "ghcr-io.renlm.cn": "https://ghcr.io",
-  "quay-io.renlm.cn": "https://quay.io",
-  "docker.renlm.cn": "https://hub.docker.com",
-  "github.renlm.cn": "https://github.com",
-  "github-io.renlm.cn": "https://renlm.github.io",
+  ["docker-io." + CUSTOM_DOMAIN]: dockerHub,
+  ["auth-docker-io." + CUSTOM_DOMAIN]: "https://auth.docker.io",
+  ["registry-k8s-io." + CUSTOM_DOMAIN]: "https://registry.k8s.io",
+  ["gcr-io." + CUSTOM_DOMAIN]: "https://gcr.io",
+  ["ghcr-io." + CUSTOM_DOMAIN]: "https://ghcr.io",
+  ["quay-io." + CUSTOM_DOMAIN]: "https://quay.io",
+  ["docker." + CUSTOM_DOMAIN]: "https://hub.docker.com",
+  ["github." + CUSTOM_DOMAIN]: "https://github.com",
+  ["github-io." + CUSTOM_DOMAIN]: "https://renlm.github.io",
 };
 
 function routeByHosts(host) {
