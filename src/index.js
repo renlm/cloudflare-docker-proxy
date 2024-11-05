@@ -11,7 +11,7 @@ const dockerAuthRealmProxy = "https://" + dockerAuthDomainProxy + "/token";
 
 const routes = {
   "docker-io.renlm.cn": dockerHub,
-  [dockerAuthDomainProxy]: "https://" + dockerAuthDomain,
+  [dockerAuthDomainProxy]: ["https://" + dockerAuthDomain],
   "registry-k8s-io.renlm.cn": "https://registry.k8s.io",
   "gcr-io.renlm.cn": "https://gcr.io",
   "ghcr-io.renlm.cn": "https://ghcr.io",
