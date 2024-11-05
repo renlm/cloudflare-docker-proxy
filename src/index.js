@@ -104,7 +104,11 @@ async function handleRequest(request) {
     headers: request.headers,
     redirect: "follow",
   });
-  return await fetch(newReq);
+  const resp = await fetch(newReq);
+  if (resp.status == 401) {
+    return responseUnauthorized(url);
+  }
+  return resp;
 }
 
 function parseAuthenticate(authenticateStr) {
