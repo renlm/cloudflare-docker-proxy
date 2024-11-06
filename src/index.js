@@ -5,13 +5,20 @@ addEventListener("fetch", (event) => {
 
 const dockerHub = TARGET_UPSTREAM;
 const dockerHubProxy = "docker-io." + CUSTOM_DOMAIN;
+const gcrIoProxy = "gcr-io." + CUSTOM_DOMAIN;
+const ghcrIoProxy = "ghcr-io." + CUSTOM_DOMAIN;
+const quayIoProxy = "quay-io." + CUSTOM_DOMAIN;
+const registryK8sIoProxy = "registry-k8s-io." + CUSTOM_DOMAIN;
+const REGISTRY_PROXY = [dockerHubProxy,gcrIoProxy,ghcrIoProxy,quayIoProxy,registryK8sIoProxy];
 
 const routes = {
+  // registry
   [dockerHubProxy]: dockerHub,
-  ["registry-k8s-io." + CUSTOM_DOMAIN]: "https://registry.k8s.io",
-  ["gcr-io." + CUSTOM_DOMAIN]: "https://gcr.io",
-  ["ghcr-io." + CUSTOM_DOMAIN]: "https://ghcr.io",
-  ["quay-io." + CUSTOM_DOMAIN]: "https://quay.io",
+  [gcrIoProxy]: "https://gcr.io",
+  [ghcrIoProxy]: "https://ghcr.io",
+  [quayIoProxy]: "https://quay.io",
+  [registryK8sIoProxy]: "https://registry.k8s.io",
+  // site
   ["docker." + CUSTOM_DOMAIN]: "https://hub.docker.com",
   ["github." + CUSTOM_DOMAIN]: "https://github.com",
   ["github-io." + CUSTOM_DOMAIN]: "https://renlm.github.io",
@@ -105,8 +112,8 @@ async function handleRequest(request) {
     redirect: "follow",
   });
   const resp = await fetch(newReq);
-  const isDockerHubProxy = dockerHubProxy == url.hostname;
-  if (isDockerHubProxy && resp.status == 401) {
+  const isRegistryProxy = REGISTRY_PROXY.indexOf(url.hostname) >= 0;
+  if (isRegistryProxy && resp.status == 401) {
     return responseUnauthorized(url);
   }
   return resp;
