@@ -22,6 +22,7 @@ const routes = {
   ["docker." + CUSTOM_DOMAIN]: "https://hub.docker.com",
   ["github." + CUSTOM_DOMAIN]: "https://github.com",
   ["github-io." + CUSTOM_DOMAIN]: "https://renlm.github.io",
+  ["rancher-mirror." + CUSTOM_DOMAIN]: "https://rancher-mirror.rancher.cn",
 };
 
 function routeByHosts(host) {
