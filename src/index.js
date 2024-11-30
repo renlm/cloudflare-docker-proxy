@@ -21,6 +21,7 @@ const routes = {
   // site
   ["docker." + CUSTOM_DOMAIN]: "https://hub.docker.com",
   ["github." + CUSTOM_DOMAIN]: "https://github.com",
+  ["raw-githubusercontent-com." + CUSTOM_DOMAIN]: "https://raw.githubusercontent.com",
   ["github-io." + CUSTOM_DOMAIN]: "https://renlm.github.io",
   ["grafana-github-io." + CUSTOM_DOMAIN]: "https://grafana.github.io",
 };

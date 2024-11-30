@@ -37,6 +37,7 @@
      "registry-k8s-io.renlm.cn": "https://registry.k8s.io",
   	 "docker.renlm.cn": "https://hub.docker.com",
   	 "github.renlm.cn": "https://github.com",
+  	 "raw-githubusercontent-com.renlm.cn": "https://raw.githubusercontent.com",
   	 "github-io.renlm.cn": "https://renlm.github.io",
   	 "grafana-github-io.renlm.cn": "https://grafana.github.io",
    };
