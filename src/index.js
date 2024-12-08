@@ -24,6 +24,7 @@ const routes = {
   ["raw-githubusercontent-com." + CUSTOM_DOMAIN]: "https://raw.githubusercontent.com",
   ["github-io." + CUSTOM_DOMAIN]: "https://renlm.github.io",
   ["grafana-github-io." + CUSTOM_DOMAIN]: "https://grafana.github.io",
+  ["npmmirror." + CUSTOM_DOMAIN]: "https://registry.npmjs.org",
 };
 
 function routeByHosts(host) {
