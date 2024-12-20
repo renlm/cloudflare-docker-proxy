@@ -40,7 +40,6 @@
   	 "raw-githubusercontent-com.renlm.cn": "https://raw.githubusercontent.com",
   	 "github-io.renlm.cn": "https://renlm.github.io",
   	 "grafana-github-io.renlm.cn": "https://grafana.github.io",
-  	 "npmmirror.renlm.cn": "https://registry.npmjs.org",
    };
    ```
 

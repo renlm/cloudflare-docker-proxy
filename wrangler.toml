@@ -24,7 +24,6 @@ name = "cloudflare-docker-proxy"
 #   { pattern = "raw-githubusercontent-com.renlm.cn", custom_domain = true },
 #   { pattern = "github-io.renlm.cn", custom_domain = true },
 #   { pattern = "grafana-github-io.renlm.cn", custom_domain = true },
-#   { pattern = "npmmirror.renlm.cn", custom_domain = true },
 # ]
 
 [env.production.vars]
