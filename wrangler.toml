@@ -10,23 +10,24 @@ local_protocol = "http"
 MODE = "debug"
 TARGET_UPSTREAM = "https://registry-1.docker.io"
 CUSTOM_DOMAIN = "renlm.cn"
+SITE_DOMAIN = "renlm.site"
 
 [env.production]
 name = "cloudflare-docker-proxy"
 # routes = [
-#   { pattern = "docker-io.renlm.cn", custom_domain = true },
-#   { pattern = "gcr-io.renlm.cn", custom_domain = true },
-#   { pattern = "ghcr-io.renlm.cn", custom_domain = true },
-#   { pattern = "quay-io.renlm.cn", custom_domain = true },
-#   { pattern = "registry-k8s-io.renlm.cn", custom_domain = true },
-#   { pattern = "docker.renlm.cn", custom_domain = true },
 #   { pattern = "github.renlm.cn", custom_domain = true },
-#   { pattern = "raw-githubusercontent-com.renlm.cn", custom_domain = true },
-#   { pattern = "github-io.renlm.cn", custom_domain = true },
-#   { pattern = "grafana-github-io.renlm.cn", custom_domain = true },
+#   { pattern = "github.renlm.site", custom_domain = true },
+#   { pattern = "raw.githubusercontent.com.renlm.site", custom_domain = true },
+#   { pattern = "grafana.github.io.renlm.site", custom_domain = true },
+#   { pattern = "docker.renlm.cn", custom_domain = true },
+#   { pattern = "gcr.io.renlm.site", custom_domain = true },
+#   { pattern = "ghcr.io.renlm.site", custom_domain = true },
+#   { pattern = "quay.io.renlm.site", custom_domain = true },
+#   { pattern = "registry.k8s.io.renlm.site", custom_domain = true },
 # ]
 
 [env.production.vars]
 MODE = "production"
 TARGET_UPSTREAM = "https://registry-1.docker.io"
 CUSTOM_DOMAIN = "renlm.cn"
+SITE_DOMAIN = "renlm.site"

@@ -30,16 +30,15 @@
    - add more records and modify the config as you need
    ```javascript
    const routes = {
-     "docker-io.renlm.cn": "https://registry-1.docker.io",
-     "gcr-io.renlm.cn": "https://gcr.io",
-     "ghcr-io.renlm.cn": "https://ghcr.io",
-     "quay-io.renlm.cn": "https://quay.io",
-     "registry-k8s-io.renlm.cn": "https://registry.k8s.io",
-  	 "docker.renlm.cn": "https://hub.docker.com",
-  	 "github.renlm.cn": "https://github.com",
-  	 "raw-githubusercontent-com.renlm.cn": "https://raw.githubusercontent.com",
-  	 "github-io.renlm.cn": "https://renlm.github.io",
-  	 "grafana-github-io.renlm.cn": "https://grafana.github.io",
+  	 "github.renlm.cn": "https://renlm.github.io",
+  	 "github.renlm.site": "https://github.com",
+  	 "raw.githubusercontent.com.renlm.site": "https://raw.githubusercontent.com",
+  	 "grafana.github.io.renlm.site": "https://grafana.github.io",
+     "docker.renlm.cn": "https://registry-1.docker.io",
+     "gcr.io.renlm.site": "https://gcr.io",
+     "ghcr.io.renlm.site": "https://ghcr.io",
+     "quay.io.renlm.site": "https://quay.io",
+     "registry.k8s.io.renlm.site": "https://registry.k8s.io",
    };
    ```
 
