@@ -4,7 +4,7 @@ addEventListener("fetch", (event) => {
 });
 
 const dockerHub = TARGET_UPSTREAM;
-const dockerHubProxy = "docker." + SITE_DOMAIN;
+const dockerHubProxy = "docker." + CUSTOM_DOMAIN;
 const gcrIoProxy = "gcr.io." + SITE_DOMAIN;
 const ghcrIoProxy = "ghcr.io." + SITE_DOMAIN;
 const quayIoProxy = "quay.io." + SITE_DOMAIN;
