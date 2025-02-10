@@ -5,10 +5,10 @@ addEventListener("fetch", (event) => {
 
 const dockerHub = TARGET_UPSTREAM;
 const dockerHubProxy = "docker." + CUSTOM_DOMAIN;
-const gcrIoProxy = "gcr.io." + SITE_DOMAIN;
-const ghcrIoProxy = "ghcr.io." + SITE_DOMAIN;
-const quayIoProxy = "quay.io." + SITE_DOMAIN;
-const registryK8sIoProxy = "registry.k8s.io." + SITE_DOMAIN;
+const gcrIoProxy = "gcr." + SITE_DOMAIN;
+const ghcrIoProxy = "ghcr." + SITE_DOMAIN;
+const quayIoProxy = "quay." + SITE_DOMAIN;
+const registryK8sIoProxy = "k8s." + SITE_DOMAIN;
 const REGISTRY_PROXY = [dockerHubProxy,gcrIoProxy,ghcrIoProxy,quayIoProxy,registryK8sIoProxy];
 
 const routes = {
@@ -21,8 +21,8 @@ const routes = {
   // site
   ["github." + CUSTOM_DOMAIN]: "https://renlm.github.io",
   ["github." + SITE_DOMAIN]: "https://github.com",
-  ["raw.githubusercontent.com." + SITE_DOMAIN]: "https://raw.githubusercontent.com",
-  ["grafana.github.io." + SITE_DOMAIN]: "https://grafana.github.io",
+  ["gitraw." + SITE_DOMAIN]: "https://raw.githubusercontent.com",
+  ["grafana." + SITE_DOMAIN]: "https://grafana.github.io",
 };
 
 function routeByHosts(host) {

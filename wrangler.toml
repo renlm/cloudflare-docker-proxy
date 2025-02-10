@@ -17,13 +17,13 @@ name = "cloudflare-docker-proxy"
 # routes = [
 #   { pattern = "github.renlm.cn", custom_domain = true },
 #   { pattern = "github.renlm.site", custom_domain = true },
-#   { pattern = "raw.githubusercontent.com.renlm.site", custom_domain = true },
-#   { pattern = "grafana.github.io.renlm.site", custom_domain = true },
+#   { pattern = "gitraw.renlm.site", custom_domain = true },
+#   { pattern = "grafana.renlm.site", custom_domain = true },
 #   { pattern = "docker.renlm.cn", custom_domain = true },
-#   { pattern = "gcr.io.renlm.site", custom_domain = true },
-#   { pattern = "ghcr.io.renlm.site", custom_domain = true },
-#   { pattern = "quay.io.renlm.site", custom_domain = true },
-#   { pattern = "registry.k8s.io.renlm.site", custom_domain = true },
+#   { pattern = "gcr.renlm.site", custom_domain = true },
+#   { pattern = "ghcr.renlm.site", custom_domain = true },
+#   { pattern = "quay.renlm.site", custom_domain = true },
+#   { pattern = "k8s.renlm.site", custom_domain = true },
 # ]
 
 [env.production.vars]
