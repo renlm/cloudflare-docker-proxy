@@ -15,6 +15,7 @@ SITE_DOMAIN = "renlm.site"
 [env.production]
 name = "cloudflare-docker-proxy"
 # routes = [
+#   { pattern = "dlgoogle.renlm.cn", custom_domain = true },
 #   { pattern = "github.renlm.cn", custom_domain = true },
 #   { pattern = "github.renlm.site", custom_domain = true },
 #   { pattern = "gitraw.renlm.site", custom_domain = true },
