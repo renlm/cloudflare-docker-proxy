@@ -30,6 +30,7 @@
    - add more records and modify the config as you need
    ```javascript
    const routes = {
+  	 "android.renlm.cn": "https://developer.android.com",
   	 "dlgoogle.renlm.cn": "https://dl.google.com",
   	 "github.renlm.cn": "https://renlm.github.io",
   	 "github.renlm.site": "https://github.com",

@@ -3,6 +3,7 @@ addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });
 
+const androidProxy = "android." + CUSTOM_DOMAIN;
 const dlGoogleProxy = "dlgoogle." + CUSTOM_DOMAIN;
 const dockerHub = TARGET_UPSTREAM;
 const dockerHubProxy = "docker." + CUSTOM_DOMAIN;
@@ -13,6 +14,7 @@ const registryK8sIoProxy = "k8s." + SITE_DOMAIN;
 const REGISTRY_PROXY = [dockerHubProxy,gcrIoProxy,ghcrIoProxy,quayIoProxy,registryK8sIoProxy];
 
 const routes = {
+  [androidProxy]: "https://developer.android.com",
   [dlGoogleProxy]: "https://dl.google.com",
   // registry
   [dockerHubProxy]: dockerHub,
